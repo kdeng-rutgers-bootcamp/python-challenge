@@ -6,8 +6,8 @@ with open('./Resources/election_data.csv', 'r') as file:
 
     votes = dict() # creating dict to hold vote counts
 
-    # skipping header row
-    next(data)
+    # skipping and saving header row
+    header = next(data)
 
     # iterating through data
     for row in data:
@@ -57,4 +57,4 @@ message = title_msg + delimiter + total_msg + delimiter + results_msg + delimite
 # writing to text file
 with open('./analysis/analysis.txt', 'w') as file:
     file.write(message)
-
+print(message)
