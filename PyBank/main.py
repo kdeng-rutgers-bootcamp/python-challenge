@@ -5,8 +5,8 @@ with open('./Resources/budget_data.csv', 'r') as file:
     # reading in data
     data = csv.reader(file, delimiter = ',')
 
-    #skipping header row
-    next(data)
+    #skipping annd saving header row
+    header = next(data)
 
     prev_month_str = '' # temp variable to hold last month recorded
     total_months = 0 # variable to track number of months recorded
@@ -79,3 +79,4 @@ with open('./Resources/budget_data.csv', 'r') as file:
 # writing to text file
 with open('./analysis/analysis.txt', 'w') as file:
     file.write(message)
+print(message)
